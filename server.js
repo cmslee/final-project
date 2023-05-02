@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); // initialize dotenv
 require('./config/database'); // connects to db
 const express = require('express');
 const path = require('path'); // node module
@@ -26,6 +26,7 @@ app.use(require('./config/checkToken'));
 
 // * All other routes
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/entries', require('./routes/api/entries'));
 
 
 

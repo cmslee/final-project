@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {login} from '../utilities/users-service';
+import {login} from '../../utilities/users-service';
 
 export default function LoginForm({ setUser }) {
 
@@ -35,11 +35,14 @@ return (
     <div className="form-container" onSubmit={handleSubmit}>
 
       <form autoComplete="off" >
-        <label>Email</label>
-        <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-
-        <label>Password</label>
-        <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+        <p>
+          <label>Email: </label>
+          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
+        </p>
+        <p>
+          <label>Password: </label>
+          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />  
+        </p>
         <button type="submit">LOG IN</button>
       </form>
 

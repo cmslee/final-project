@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {signUp} from '../utilities/users-service';
+import {signUp} from '../../utilities/users-service';
 
 function SignUpForm({setUser}) {
   const [formData, setFormData] = useState({
@@ -40,17 +40,25 @@ function SignUpForm({setUser}) {
     <div>
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
-            <label>Name</label>
-            <input type="text" name="name" value={formData.name} onChange={handleChange} required/>
+            <p>
+              <label>Name: </label>
+              <input type="text" name="name" value={formData.name} onChange={handleChange} required/>
+            </p>
             
-            <label>Email</label>
-            <input type="text" name="email" value={formData.email} onChange={handleChange} required/>
+            <p>
+              <label>Email: </label>
+              <input type="text" name="email" value={formData.email} onChange={handleChange} required/>
+            </p>
             
-            <label>password</label>
-            <input type="password" name="password" value={formData.password} onChange={handleChange} required/>
+            <p>
+              <label>Password: </label>
+              <input type="password" name="password" value={formData.password} onChange={handleChange} required/>
+            </p>
             
-            <label>Confirm</label>
-            <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required/>
+            <p>
+              <label>Confirm: </label>
+              <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required/>
+            </p>
 
             <button type="submit" disabled={disable}>SIGN UP</button>
         </form>
