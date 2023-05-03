@@ -8,20 +8,25 @@ function EntryIndexPage () {
     useEffect(() => {
         const fetchEntries = async () => {            
             try {
-                const res = await fetch('/api/entries')
-                const data = await res.json()
+                const response = await fetch('/api/entries')
+                const data = await response.json()
                 console.log(data)
-                setEntriesData()
-                
+                setEntriesData(data)
             } catch (error) {
                 console.error(error)
             }
         }
+        fetchEntries()
     }, [])
 
     return (
         <div>
             <h1>Entry Index Page</h1>
+            {entriesData && entriesData.map((entry) => (
+                <Link>
+                    <p key={entry._id}>{entry.wordRom}</p>
+                </Link>
+            ))}
         </div>
     )
 }

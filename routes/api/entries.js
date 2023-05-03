@@ -1,10 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const usersCtrl = require('../../controllers/api/users');
+const entriesCtrl = require('../../controllers/api/entries');
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
-//*POST
+//*Index route: get all workouts
+router.get('/', entriesCtrl.index)
 
-//*EDIT
+//*New route: create new entry
+router.post('/', entriesCtrl.create);
 
-//*DELETE
+//*Show route: get a single entry
+router.get('/:id', entriesCtrl.show)
+
+//*Delete route: delete an entry
+router.delete('/:id', entriesCtrl.deleteAnEntry)
+
+//*Edit route: update an entry
+router.patch('/:id', entriesCtrl.updateEntry)
+
+module.exports = router;

@@ -18,6 +18,8 @@ function NewEntryPage({ user, setUser }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
+            const entry = {entryData}
+            const res = await fetch('/api/entries', )
             console.log(entryData)
 
 

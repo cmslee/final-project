@@ -1,6 +1,6 @@
 
 
-function Landingpage() {
+function HomePage() {
     return (
         <div>
             <h1>Landing Page: Welcome to GlossaryApp</h1>
@@ -8,4 +8,4 @@ function Landingpage() {
     )
 }
 
-export default Landingpage;
+export default HomePage;

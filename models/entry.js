@@ -17,7 +17,11 @@ const entrySchema = new Schema({
         lowercase: true,
         required: true
     },
-    definition: {
+    translation: {
+        type: String,
+        max: 100,
+    },
+    gloss: {
         type: String,
         max: 800
     },
@@ -26,11 +30,11 @@ const entrySchema = new Schema({
         enum: ['v.1', 'v.2', 'v.3', 'v.4', 'v.5', 'v.6', 'v.7', 'v.8']
     },
     chapter: {
-        type: Integer,
+        type: Number,
         //something that restricts the number range
     },
     pageNo: {
-        type: Integer,
+        type: Number,
         //something that restricts the page possibilities
     },
     example: {
