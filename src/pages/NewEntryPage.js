@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import * as entriesAPI from '../utilities/entries-api';
 
-function NewEntryPage({ user, setUser }) {
+
+function NewEntryPage() {
 
     const [entryData, setEntryData] = useState({
         wordRom: "",
@@ -18,12 +20,11 @@ function NewEntryPage({ user, setUser }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const entry = {entryData}
-            const res = await fetch('/api/entries', )
-            console.log(entryData)
-
-
-            // setEntryData()
+            const entryFormData = {entryData}
+            console.log(entryFormData)
+            const entry = await entriesAPI.sendForm(entryFormData)
+            setEntryData()
+            console.log('new entry added', entry)
         } catch (error) {
             console.error(error)
         }
@@ -37,19 +38,26 @@ function NewEntryPage({ user, setUser }) {
 
     return (
         <div className='entryform-container'>
-            <h1>Create New Entry</h1>
             <form autoComplete='off' onSubmit={handleSubmit}>
-                <p>
-                    <label>SFX (romaji-ish): </label>
-                    <input type='text' name='wordRom' value={entryData.wordRom} onChange={handleChange} required />
-                </p>
-                <p>
-                    <label>SFX (kana): </label>
-                    <input type='text' name='wordKan' value={entryData.wordKan} onChange={handleChange} required />
-                </p>
-                <p>
-                    <button type='submit'>Add</button>
-                </p>
+                <h3>Add New SFX Entry</h3>
+                <label>SFX (romaji-ish): </label>
+                <input 
+                    type='text' 
+                    name='wordRom' 
+                    value={entryData.wordRom} 
+                    onChange={handleChange} required 
+                />
+                <br/>
+                <label>SFX (kana): </label>
+                <input 
+                    type='text' 
+                    name='wordKan' 
+                    value={entryData.wordKan} 
+                    onChange={handleChange} required 
+                />
+                <br/>
+
+                <button type='submit'>Add</button>
 
             </form>
         </div>

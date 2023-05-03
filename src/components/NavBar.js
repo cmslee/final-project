@@ -10,7 +10,10 @@ function NavBar({ user, setUser }) {
     <nav>
       <Link to="/entries">SFX List</Link>
       &nbsp; | &nbsp;
-      <Link to="/entries/new">Create New Entry</Link> <span>Welcome, {user.name}</span>{" "}
+      <Link to="/entries/new">Create New Entry</Link>
+      &nbsp; | &nbsp; 
+      <span>Welcome, {user.name}</span>{" "}
+      &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>
         Logout
       </Link>

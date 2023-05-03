@@ -1,9 +1,11 @@
 require('dotenv').config(); // initialize dotenv
 require('./config/database'); // connects to db
+
 const express = require('express');
 const path = require('path'); // node module
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const cors = require('cors');
 
 const app = express();
 // development port: 3001

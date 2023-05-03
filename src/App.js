@@ -3,9 +3,9 @@ import {useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import AuthPage from './pages/AuthPage';
+import Header from './components/Header';
 import NavBar from './components/NavBar';
 import EntryPage from './pages/EntryPage';
-import HomePage from './pages/HomePage';
 import NewEntryPage from './pages/NewEntryPage';
 import EntryIndexPage from './pages/EntryIndexPage';
 
@@ -20,13 +20,17 @@ function App() {
     <main className="App">
      { user ? 
       <>
-      <NavBar user={user} setUser={setUser}/>
-      <Routes>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path='/entries' element={<EntryIndexPage />}/>
-        <Route path='/entries/new' element={<NewEntryPage/>}/>
-        <Route path='/entries/:id' element={<EntryPage/>}/>
-      </Routes>
+        <header>
+          <Header/>
+          <NavBar user={user} setUser={setUser}/>  
+        </header>
+        <div className='main-body' >
+          <Routes>
+            <Route path='/entries' element={<EntryIndexPage />}/>
+            <Route path='/entries/new' element={<NewEntryPage/>}/>
+            <Route path='/entries/:id' element={<EntryPage/>}/>
+          </Routes>
+        </div>
       </>
      : 
       <AuthPage setUser={setUser}/>

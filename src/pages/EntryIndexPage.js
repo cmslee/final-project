@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { Params, Link } from "react-router-dom";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
-function EntryIndexPage () {
+function EntryIndexPage() {
     const [entriesData, setEntriesData] = useState(null)
 
     useEffect(() => {
-        const fetchEntries = async () => {            
+        const fetchEntries = async () => {
             try {
                 const response = await fetch('/api/entries')
                 const data = await response.json()
@@ -20,14 +19,15 @@ function EntryIndexPage () {
     }, [])
 
     return (
-        <div>
-            <h1>Entry Index Page</h1>
-            {entriesData && entriesData.map((entry) => (
-                <Link>
-                    <p key={entry._id}>{entry.wordRom}</p>
-                </Link>
-            ))}
-        </div>
+        <main className="main-page">
+            <ul className="index-container">
+                    {entriesData && entriesData.map((entry) => (
+                        <Link to={`/entries/${entry._id}`}>
+                            <li key={entry._id}>{entry.wordRom} ({entry.wordKan})</li>
+                        </Link>
+                    ))}
+            </ul>
+        </main>
     )
 }
 

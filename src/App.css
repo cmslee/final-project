@@ -1,4 +1,32 @@
 .App {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem;
+  background-color: lightcyan;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+
+.index-container {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+a {
+  color: darkblue;
+}
+
+a :hover {
+  color: gray;
+}

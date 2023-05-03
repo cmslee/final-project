@@ -16,6 +16,6 @@ router.get('/:id', entriesCtrl.show)
 router.delete('/:id', entriesCtrl.deleteAnEntry)
 
 //*Edit route: update an entry
-router.patch('/:id', entriesCtrl.updateEntry)
+router.put('/:id', entriesCtrl.updateEntry)
 
 module.exports = router;

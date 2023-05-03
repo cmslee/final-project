@@ -6,7 +6,7 @@ const Entry = require('../../models/entry');
 async function index (req, res) {
     try {
         const entries = await Entry.find({}).sort({wordRom: 1});
-        res.status(200).json(entries)
+        res.json(entries)
     } catch (e) {
         res.status(400).json({msg: e.message});
     }
@@ -16,7 +16,7 @@ async function index (req, res) {
 async function show (req, res) {
     try {
         const entry = await Entry.findById(req.params.id);
-        res.status(200).json(entry)
+        res.json(entry)
     } catch (e) {
         res.status(404).json({msg: e.message})
     }
@@ -28,7 +28,7 @@ async function create (req,res) {
     try {
         const entry = await Entry.create(req.body);
         console.log(entry);
-        res.status(200).json(entry)
+        res.json(entry)
     } catch (error) {
         console.log(error);
         res.status(400).json(error)
@@ -39,7 +39,7 @@ async function create (req,res) {
 async function deleteAnEntry (req,res) {
     try {
         const entry = await Entry.findByIdAndRemove(req.params.id);
-        res.status(200).json(entries)
+        res.json(entries)
     } catch (error) {
         res.status(400).json(error)
     }
@@ -49,7 +49,7 @@ async function deleteAnEntry (req,res) {
 async function updateEntry(req,res) {
     try {
         const entry = await Entry.findByIdAndUpdate(req.params.id, req.body, {new: true});
-        res.status(200).json(entry)
+        res.json(entry)
     } catch (error) {
         res.status(400).json(error)
     }
