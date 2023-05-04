@@ -8,11 +8,11 @@ SFX Glossary-maker is an SPA inspired by one of the many capabilities of CAT (Co
 
 ## Explanation of Technologies Used
 
-This fullstack app is created using the MERN stack, with MongoDB for data storage, Express and Node.js for backend build, and React for frontend build. The [Cite abraham's](). 
+This fullstack app is created using the MERN stack, with MongoDB for data storage, Express and Node.js for backend build, and React for frontend build. I started by cloning the starter backend code from Abraham Tavarez's [MERN-instracture-p1](https://github.com/AbeTavarez/MERN-infrastructure-P1.git) app on github.
 
 ## Approach  
 
-For a tool intended to act as a reference tool for translation, I tried to minimize "page jumps" while keeping views functional. After logging in, the user is brought to a landing page where all current SFX entries are listed by name. A header keeps the title and navigation in view. 
+For a tool intended as a handy reference tool for translation, I tried to minimize "page jumps" while keeping views functional. After logging in, the user is brought to a landing page where all current SFX entries are listed by name. A header keeps the title and navigation in view. 
 
 ![Landing Page Wireframe Image](./img/wireframe-landing.png)
 
@@ -33,20 +33,32 @@ For more on the nuts and bolts of the building process, please see my [Trello bo
 
 ## Unsolved Problems
 
-This app is not yet deployed.
+This is short list of unsolved problems:  
+
+- Edit button 
+    - not linked to Edit Form component 
+    - not set to toggle visibility of Edit Form component 
+- Inconsistency in whether (prefilled) defaultValues in Edit Form are rendered in updates
+- Built-in page navigation/refreshes not working consistently
+- App is not yet deployed
 
 ## Future Enhancements
 
-Something that would check for multiple entries with same string and assign it a different name. 
+Some upcoming builds include: 
 
-A form feature that would allow users to sign additions and edits to entries and have them displayed as such.
-
-Add categories to be able to include not just SFX, but also other recurring terms and reference lists.
-
-Display in alphabetical order.
+- Form/User features
+    - Allowing different users to add, sign, and display their updates on existing entries
+    - More intuitive interface for editing each entry element 
+- Rendering features
+    - Add categories for entries, such as letters of the alphabet, for better display as number of entries grow
+    - Add sorting capability to allow entries to be filtered and displayed based on different data points 
 
 ## References/Research
 
 Resources on CAT/TM Tools: [Trados "Translation 101"](https://www.trados.com/solutions/cat-tools/translation-101-what-is-a-cat-tool.html) | [memoq webinar](https://www.memoq.com/resources/webinars/memoq-getting-started-translators) | [Phrase blog guide](https://phrase.com/blog/posts/cat-tools/)
 
-Key references for build: Per Scholas course materials | [MERN Tutorial by The Net Ninja](https://youtu.be/98BzS5Oz5E4)
+Key references for build: [Abraham Tavarez's MERN-infractructure app](https://github.com/AbeTavarez/MERN-infrastructure-P1.git) | Per Scholas course materials and past code-alongs | [MERN Tutorial by The Net Ninja](https://youtu.be/98BzS5Oz5E4)
+
+## Acknowledgements
+  
+Thank you to my patient and generous instructors and co-learners. It's been uplifting and real to code with you all!

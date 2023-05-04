@@ -42,7 +42,7 @@ function EntryPage () {
         try {
             const deletedEntry = await entriesAPI.deleteEntry(entry._id);
             console.log(deletedEntry);
-            navigate(-1)
+            navigate('/entries')
         } catch (error) {
             
         }

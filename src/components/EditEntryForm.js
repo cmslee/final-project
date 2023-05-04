@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import * as entriesAPI from '../utilities/entries-api';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -10,7 +10,7 @@ function EditEntryForm ({entry}) {
 
     const {id} = useParams()
 
-
+    //note: all of the data we're passing through here is NEW
     const handleEdit = async (e, newEntry) => {
         e.preventDefault();
         try {
