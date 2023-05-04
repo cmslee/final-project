@@ -7,13 +7,13 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 router.get('/', entriesCtrl.index)
 
 //*New route: create new entry
-router.post('/', entriesCtrl.create);
+router.post('/new', entriesCtrl.create);
 
 //*Show route: get a single entry
 router.get('/:id', entriesCtrl.show)
 
 //*Delete route: delete an entry
-router.delete('/:id', entriesCtrl.deleteAnEntry)
+router.delete('/:id', ensureLoggedIn, entriesCtrl.deleteAnEntry)
 
 //*Edit route: update an entry
 router.put('/:id', entriesCtrl.updateEntry)

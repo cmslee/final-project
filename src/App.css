@@ -30,3 +30,8 @@ a {
 a :hover {
   color: gray;
 }
+
+li {
+  padding: .05rem;
+  margin: .05rem
+}

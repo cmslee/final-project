@@ -30,8 +30,7 @@ async function create (req,res) {
         console.log(entry);
         res.json(entry)
     } catch (error) {
-        console.log(error);
-        res.status(400).json(error)
+        console.error(error);
     }
 }
 

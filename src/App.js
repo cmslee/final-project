@@ -27,7 +27,7 @@ function App() {
         <div className='main-body' >
           <Routes>
             <Route path='/entries' element={<EntryIndexPage />}/>
-            <Route path='/entries/new' element={<NewEntryPage/>}/>
+            <Route path='/entries/new' element={<NewEntryPage user={user}/>}/>
             <Route path='/entries/:id' element={<EntryPage/>}/>
           </Routes>
         </div>

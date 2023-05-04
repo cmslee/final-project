@@ -9,12 +9,12 @@ const entrySchema = new Schema({
     wordRom: {
         type: String,
         trim: true,
+        lowercase: true,
         required: true
     },
     wordKan: {
         type: String,
         trim: true,
-        lowercase: true,
         required: true
     },
     translation: {
@@ -27,7 +27,7 @@ const entrySchema = new Schema({
     },
     source: {
         type: String,
-        enum: ['v.1', 'v.2', 'v.3', 'v.4', 'v.5', 'v.6', 'v.7', 'v.8']
+        enum: ['1', '2', '3', '4', '5', '6', '7', '8']
     },
     chapter: {
         type: Number,

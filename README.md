@@ -3,12 +3,12 @@
 
 ## Introduction
 
-SFX Glossary-maker is an SPA inspired by one of the many capabilities of CAT (Computer Assisted Translation) and TM (Translation Memory) software: the ability to create termbases, a database of terms and phrases stored from a project you are translating that can be easily accessed for your reference. What I've doned is scaled this down immensely for personal use and, specifically, for manga sound effects and onomatopoetic expressions.   
+SFX Glossary-maker is an SPA inspired by one of the many capabilities of CAT (Computer Assisted Translation) and TM (Translation Memory) software: creating termbases, or a dataset of terms and phrases stored from a specific text/document that can be easily referenced during the translation process. What I've doned is scaled this down immensely for personal use and, specifically, for manga sound effects as well as onomatopoetic expressions.   
 
 
 ## Explanation of Technologies Used
 
-
+This fullstack app is created using the MERN stack, with MongoDB for data storage, Express and Node.js for backend build, and React for frontend build. The [Cite abraham's](). 
 
 ## Approach  
 
@@ -48,3 +48,5 @@ Display in alphabetical order.
 ## References/Research
 
 Resources on CAT/TM Tools: [Trados "Translation 101"](https://www.trados.com/solutions/cat-tools/translation-101-what-is-a-cat-tool.html) | [memoq webinar](https://www.memoq.com/resources/webinars/memoq-getting-started-translators) | [Phrase blog guide](https://phrase.com/blog/posts/cat-tools/)
+
+Key references for build: Per Scholas course materials | [MERN Tutorial by The Net Ninja](https://youtu.be/98BzS5Oz5E4)
