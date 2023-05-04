@@ -35,3 +35,35 @@ li {
   padding: .05rem;
   margin: .05rem
 }
+
+.entrypage-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.entry-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%
+}
+
+.entry {
+  width: 60%
+}
+
+.update-buttons {
+  padding: 1rem;
+  margin-right: 12rem;
+  border-right: groove;
+  border-color: lightgray;
+  width: 30%
+}
+
+.update-buttons-box {
+  margin: 1rem;
+  align-items: baseline;
+}
+.edit-box {
+  width: 40%
+}

@@ -13,9 +13,9 @@ router.post('/new', entriesCtrl.create);
 router.get('/:id', entriesCtrl.show)
 
 //*Delete route: delete an entry
-router.delete('/:id', ensureLoggedIn, entriesCtrl.deleteAnEntry)
+router.delete('/:id', entriesCtrl.deleteAnEntry)
 
 //*Edit route: update an entry
-router.put('/:id', entriesCtrl.updateEntry)
+router.put('/edit/:id', entriesCtrl.updateEntry)
 
 module.exports = router;

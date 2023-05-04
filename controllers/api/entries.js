@@ -46,6 +46,7 @@ async function deleteAnEntry (req,res) {
 
 // Update an Entry
 async function updateEntry(req,res) {
+    console.log(req.body)
     try {
         const entry = await Entry.findByIdAndUpdate(req.params.id, req.body, {new: true});
         res.json(entry)

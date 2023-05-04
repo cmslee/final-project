@@ -58,7 +58,8 @@ function NewEntryPage( ) {
                     type='text' 
                     name='wordRom' 
                     value={entryData.wordRom} 
-                    onChange={handleChange} required 
+                    onChange={handleChange} 
+                    required 
                 />
                 <br/>
                 <label>SFX (kana): </label>
@@ -66,7 +67,8 @@ function NewEntryPage( ) {
                     type='text' 
                     name='wordKan' 
                     value={entryData.wordKan} 
-                    onChange={handleChange} required 
+                    onChange={handleChange} 
+                    required 
                 />
                 <br/>
                 <label>Translation: </label>
@@ -91,6 +93,7 @@ function NewEntryPage( ) {
                     name='source'
                     value={entryData.source}
                     onChange={handleChange}
+                    required
                 />
                 <br/>
                 <label>Chapter: </label>
