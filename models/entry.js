@@ -19,7 +19,7 @@ const entrySchema = new Schema({
     },
     translation: {
         type: String,
-        max: 100,
+        max: 100
     },
     gloss: {
         type: String,

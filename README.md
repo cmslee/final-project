@@ -5,10 +5,11 @@
 
 SFX Glossary-maker is an SPA inspired by one of the many capabilities of CAT (Computer Assisted Translation) and TM (Translation Memory) software: creating termbases, or a dataset of terms and phrases stored from a specific text/document that can be easily referenced during the translation process. What I've doned is scaled this down immensely for personal use and, specifically, for manga sound effects as well as onomatopoetic expressions.   
 
+[When ready, deployed project link will be available here.]()
 
 ## Explanation of Technologies Used
 
-This fullstack app is created using the MERN stack, with MongoDB for data storage, Express and Node.js for backend build, and React for frontend build. I started by cloning the starter backend code from Abraham Tavarez's [MERN-instracture-p1](https://github.com/AbeTavarez/MERN-infrastructure-P1.git) app on github.
+This app is created using the MERN stack: MongoDB for data storage, Express and Node.js for backend build, and React for frontend build. I started by cloning the starter code from Abraham Tavarez's [MERN-instracture-p1](https://github.com/AbeTavarez/MERN-infrastructure-P1.git), which is the basis for in-class code alongs for building a backend with user authentication. Adjustments to the code were made to fit the needs of the app.
 
 ## Approach  
 
